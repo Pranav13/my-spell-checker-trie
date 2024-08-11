@@ -1,0 +1,74 @@
+.spell-checker {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #f9f9f9;
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.card-content {
+  margin-top: 10px;
+}
+
+#contentEditableDiv {
+  min-height: 100px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.loading {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.suggestions {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  max-height: 0; /* Start with height 0 */
+  overflow-y: hidden; /* Hide overflow initially */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Start with opacity 0 */
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+}
+
+.suggestions.show {
+  max-height: 150px; /* Set to maximum height */
+  opacity: 1; /* Set opacity to 1 */
+  overflow-y: auto; /* Enable scrolling */
+}
+
+.suggestions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.suggestions li {
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.suggestions li:hover, .suggestions li.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.highlighted-word {
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
